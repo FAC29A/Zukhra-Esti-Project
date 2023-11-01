@@ -1,2 +1,2 @@
 # Zukhra-Esti-Project
-o-do list tracker
+To-do list tracker
