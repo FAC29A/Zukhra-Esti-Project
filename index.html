@@ -1,60 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do list tracker</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Let's Do List!</h1>
-      </header>
 
-    <main>
-        <!-- ADD NEW TASK -->
-        <form action="submit">
-          <div class="task">
-            <input type="text" id="add-task" placeholder="Add new task..." required>
-            <button type="submit" id="add-task-btn">&#43;</button>
-          </div>
-        </form>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do list tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Let's Do List!</h1>
+  </header>
+
+  <main>
+    <!-- ADD NEW TASK -->
+    <form id="task-form">
+      <div class="task">
+        <input type="text" id="add-task" placeholder="Add new task...">
+        <button type="submit" id="add-task-btn">+</button>
+      </div>
+    </form>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-modal">&times;</span>
+        <h2>Add New Task</h2>
+        <input type="text" id="task-name" placeholder="Task name" required>
+        <textarea id="task-description" placeholder="Task description(optional)"></textarea>
+        <label for="priority">Priority:</label>
+        <select id="priority">
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+        <button id="add-task-modal">Add</button>
+      </div>
+    </div>
+
+    <!-- Task List -->
+    <div id="task-list"></div>
 
     <!-- TO-DO SECSION -->
-        <div class="all-three-sections">
-          <div 
-            class="tasks-container"  
-            id="to-do"
-            ondragover="onDragOver(event)"
-            ondrop="onDrop(event)"
-            >
-            <h2>To-Do:</h2>
-          </div>
-      
-    <!-- IN PROGRESS SECTION -->
-          <div 
-            class="tasks-container" 
-            id="in-progress"
-            ondragover="onDragOver(event)"
-            ondrop="onDrop(event)"
-            >
-            <h2>In progress:</h2>
-          </div>
-      
-    <!-- COPLETED SECTION -->
-          <div 
-            class="tasks-container" 
-            id="completed"
-            ondragover="onDragOver(event)"
-            ondrop="onDrop(event)"
-            >
-            <h2>Completed:</h2>
-          </div>
-        </div>
-    </main>
-      
-    <!-- Content of your web page goes here -->
+    <div class="all-three-sections">
+      <div class="tasks-container" id="to-do" ondragover="onDragOver(event)" ondrop="onDrop(event)">
+        <h2>To-Do:</h2>
+      </div>
 
-    <script src="js/JavaScript.js"></script>
+      <!-- IN PROGRESS SECTION -->
+      <div class="tasks-container" id="in-progress" ondragover="onDragOver(event)" ondrop="onDrop(event)">
+        <h2>In progress:</h2>
+      </div>
+
+      <!-- COPLETED SECTION -->
+      <div class="tasks-container" id="completed" ondragover="onDragOver(event)" ondrop="onDrop(event)">
+        <h2>Completed:</h2>
+      </div>
+    </div>
+  </main>
+
+  <!-- Content of your web page goes here -->
+
+  <script src="js/JavaScript.js"></script>
 </body>
+
 </html>
