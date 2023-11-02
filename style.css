@@ -1,0 +1,97 @@
+:root{
+    --font: 'Nunito', sans-serif;
+    --dark-green: rgb(35, 129, 118);
+    --dark-grey: #e2e2dd;
+    --blue: #4584b8;
+    --green: #8ca8a2;
+    --orange: #ebc183;
+    --pink: #db85b5;
+    --peach: #F9C6C9;
+    --black: #5a5555;
+  }
+
+  /* Let's Do List! */
+h1 {
+    color: var(--dark-green);
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  header {
+    background: var(--black);
+    width: 100%;
+    padding: 0.5rem 1.5rem;
+  }
+
+  /* ALL PAGE */
+body {
+    background-color: var(--green);
+}
+
+/* ADD NEW TASK */
+.task {
+    margin: 1%;
+    text-align: center;
+}
+
+input {
+    background: var(--dark-grey);
+    border-radius: 15px;
+    border: none;
+    margin: .75rem .5rem;
+    width: 65vw;
+    max-width: 23rem;
+    min-height: 3rem;
+    padding-left: 1rem;
+  }
+
+  .placeholder {
+    color: white;
+  }
+
+button {
+    background: var(--dark-grey);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: large;
+  }
+
+
+.all-three-sections {
+    text-align: center;
+    width: 90vw;
+    margin: 2rem 9rem;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+  #to-do {
+    background-color: #4584b8;
+    display: grid;
+    min-height: 26rem;
+    border-radius: 10%;
+    margin: 9%;
+  }
+
+  #in-progress {
+    background-color: var(--orange);
+    display: grid;
+    min-height: 26rem;
+    border-radius: 10%;.    
+    margin: 9%;
+
+  }
+
+  #completed {
+    background-color: var(--dark-green);
+    display: grid;
+    min-height: 26rem;
+    border-radius: 10%;
+    margin: 9%;
+
+  }
