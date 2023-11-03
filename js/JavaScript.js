@@ -30,7 +30,7 @@ function clearInputFields() {
 // Function to create a task element
 function createTaskElement(taskName, taskDescription, priority) {
     const taskElement = document.createElement("div");
-    taskElement.classList.add("task");
+    taskElement.classList.add("task-content");
     taskElement.innerHTML = `<h3>${taskName}</h3>`;
 
     if (taskDescription.trim() !== "") {

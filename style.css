@@ -161,3 +161,17 @@ select {
   background-color: #555;
 }
 
+.task-list {
+  position: relative;
+  width: 85%;
+  margin: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-content {
+  background: yellow;
+  margin: 10px;
+  border-radius: 10px;
+}
