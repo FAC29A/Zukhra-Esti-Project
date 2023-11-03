@@ -34,17 +34,19 @@
           <option value="medium">Medium</option>
           <option value="low">Low</option>
         </select>
-        <button id="add-task-modal">Add</button>
+        <button id="add-task-modal" class="modal-button">Add</button>
       </div>
     </div>
-
-    <!-- Task List -->
-    <div id="task-list"></div>
 
     <!-- TO-DO SECSION -->
     <div class="all-three-sections">
       <div class="tasks-container" id="to-do" ondragover="onDragOver(event)" ondrop="onDrop(event)">
         <h2>To-Do:</h2>
+        <!-- Task List -->
+        <div class="list-container">
+          <div id="task-list" class="task-content"></div>
+        </div>
+        
       </div>
 
       <!-- IN PROGRESS SECTION -->
