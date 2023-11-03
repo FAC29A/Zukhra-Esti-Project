@@ -6,7 +6,7 @@ const addTaskModalBtn = document.getElementById("add-task-modal");
 const taskNameInput = document.getElementById("task-name");
 const taskDescriptionTextarea = document.getElementById("task-description");
 const prioritySelect = document.getElementById("priority");
-const taskList = document.getElementById("task-list");
+const toDo = document.getElementById("to-do");
 const addTaskInput = document.getElementById("add-task");
 
 // Function to open the modal
@@ -30,6 +30,7 @@ function clearInputFields() {
 function createTaskElement(taskName, taskDescription, priority) {
     const taskElement = document.createElement("div");
     taskElement.classList.add("task-content");
+    taskElement.draggable = true;
     taskElement.innerHTML = `<h3>${taskName}</h3>`;
 
     if (taskDescription.trim() !== "") {
@@ -53,7 +54,7 @@ function addTask()  {
         const taskElement = createTaskElement(taskName, taskDescription, priority);
 
         // Add the task to the task list
-        taskList.appendChild(taskElement);
+        toDo.appendChild(taskElement);
 
         // Clear input fields
         clearInputFields();
@@ -77,4 +78,25 @@ closeModalBtn.addEventListener("click", closeModal);
 // Event listener to add a task from the modal
 addTaskModalBtn.addEventListener("click", addTask);
 
+//*****************************************************transfer the task to another place by dragging
 
+const draggable = document.querySelectorAll('.task-content');
+const inProgress = document.querySelector('.in-progress');
+
+// Add 'dragstart' event listener to each task container
+draggable.forEach((taskElement) => {
+    taskElement.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setData('text/plain', 'This is a draggable div');
+    });
+});
+// Add 'dragover' event listener to the target container to allow dropping
+inProgress.addEventListener('dragover', (e) => {
+    e.preventDefault(); // Allow dropping
+});
+
+// Add 'drop' event listener to the target container
+inProgress.addEventListener('drop', (e) => {
+    e.preventDefault();
+    const data = e.dataTransfer.getData('text/plain');
+    inProgress.appendChild(draggable); // Move the draggable element to the target container
+});

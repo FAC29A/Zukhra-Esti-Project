@@ -12,7 +12,7 @@
 
   /* Let's Do List! */
 h1 {
-    color: var(--dark-green);
+    color: var(--dark-grey);
     font-size: 3rem;
     text-align: center;
   }
@@ -82,7 +82,7 @@ button {
     background-color: var(--orange);
     display: grid;
     min-height: 26rem;
-    border-radius: 10%;.    
+    border-radius: 10%;    
     margin: 9%;
 
   }
@@ -161,7 +161,7 @@ select {
   background-color: #555;
 }
 
-.task-list {
+.to-do {
   position: relative;
   width: 85%;
   margin: auto;
@@ -171,7 +171,8 @@ select {
 }
 
 .task-content {
-  background: yellow;
-  margin: 10px;
+  background: var(--peach);
+  margin: 16px;
   border-radius: 10px;
+  cursor: pointer;
 }
