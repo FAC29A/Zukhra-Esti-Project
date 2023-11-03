@@ -1,13 +1,12 @@
 // Get references to DOM elements
 const modal = document.getElementById("modal");
-const openModalBtn = document.getElementById("add-task-btn");
+const openModalBtn = document.getElementById("open-modal-btn");
 const closeModalBtn = document.getElementById("close-modal");
 const addTaskModalBtn = document.getElementById("add-task-modal");
 const taskNameInput = document.getElementById("task-name");
 const taskDescriptionTextarea = document.getElementById("task-description");
 const prioritySelect = document.getElementById("priority");
 const taskList = document.getElementById("task-list");
-const taskForm = document.getElementById("task-form");
 const addTaskInput = document.getElementById("add-task");
 
 // Function to open the modal
@@ -64,16 +63,13 @@ function addTask()  {
     }
 }
 
-// Event listener for form submission
-taskForm.addEventListener("submit", function (event) {
+// Event listener to open modal button
+openModalBtn.addEventListener("click", function (event) {
     event.preventDefault();
     const taskName = addTaskInput.value;
     taskNameInput.value = taskName;
     openModal();
 });
-
-// Event listener to open the modal
-openModalBtn.addEventListener("click", openModal);
 
 // Event listener to close the modal
 closeModalBtn.addEventListener("click", closeModal);
