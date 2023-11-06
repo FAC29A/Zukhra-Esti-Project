@@ -1,179 +1,178 @@
 :root{
-    --font: 'Nunito', sans-serif;
-    --dark-green: rgb(35, 129, 118);
-    --dark-grey: #e2e2dd;
-    --blue: #4584b8;
-    --green: #8ca8a2;
-    --orange: #ebc183;
-    --pink: #db85b5;
-    --peach: #F9C6C9;
-    --black: #5a5555;
-  }
+  --font: 'Nunito', sans-serif;
+  --dark-green: rgb(35, 129, 118);
+  --dark-grey: #e2e2dd;
+  --blue: #4584b8;
+  --green: #8ca8a2;
+  --orange: #ebc183;
+  --pink: #db85b5;
+  --peach: #F9C6C9;
+  --black: #5a5555;
+}
 
-  /* Let's Do List! */
+/* Let's Do List! */
 h1 {
-    color: var(--dark-grey);
-    font-size: 3rem;
-    text-align: center;
-  }
+  color: var(--dark-green);
+  font-size: 3rem;
+  text-align: center;
+}
 
-  header {
-    background: var(--black);
-    width: 100%;
-    padding: 0.5rem 1.5rem;
-  }
+header {
+  background: var(--black);
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+}
 
-  /* ALL PAGE */
+/* ALL PAGE */
 body {
-    background-color: var(--green);
+  background-color: var(--green);
 }
 
 /* ADD NEW TASK */
 .task {
-    margin: 1%;
-    text-align: center;
+  margin: 1%;
+  text-align: center;
 }
 
 input {
-    background: var(--dark-grey);
-    border-radius: 15px;
-    border: none;
-    margin: .75rem .5rem;
-    width: 65vw;
-    max-width: 23rem;
-    min-height: 3rem;
-    padding-left: 1rem;
-  }
+  background: var(--dark-grey);
+  border-radius: 15px;
+  border: none;
+  margin: .75rem .5rem;
+  width: 65vw;
+  max-width: 23rem;
+  min-height: 3rem;
+  padding-left: 1rem;
+}
 
-  .placeholder {
-    color: white;
-  }
+.placeholder {
+  color: white;
+}
 
 button {
-    background: var(--dark-grey);
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: large;
-  }
+  background: var(--dark-grey);
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: large;
+}
 
 
 .all-three-sections {
-    text-align: center;
-    width: 90vw;
-    margin: 2rem 9rem;
-    border-radius: 30px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    flex-direction: column;
-    align-items: center;
+  text-align: center;
+  width: 90vw;
+  margin: 2rem 9rem;
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-direction: column;
+  align-items: center;
 
-  }
-  
-  #to-do {
-    background-color: #4584b8;
-    display: grid;
-    min-height: 26rem;
-    border-radius: 10%;
-    margin: 9%;
-  }
+}
 
-  #in-progress {
-    background-color: var(--orange);
-    display: grid;
-    min-height: 26rem;
-    border-radius: 10%;    
-    margin: 9%;
+#to-do {
+  background-color: #4584b8;
+  display: grid;
+  min-height: 26rem;
+  border-radius: 10%;
+  margin: 9%;
+}
 
-  }
+#in-progress {
+  background-color: var(--orange);
+  display: grid;
+  min-height: 26rem;
+  border-radius: 10%;.    
+  margin: 9%;
 
-  #completed {
-    background-color: var(--dark-green);
-    display: grid;
-    min-height: 26rem;
-    border-radius: 10%;
-    margin: 9%;
+}
 
-  }
+#completed {
+  background-color: var(--dark-green);
+  display: grid;
+  min-height: 26rem;
+  border-radius: 10%;
+  margin: 9%;
 
-  /* Modal styles. add the styles for the window later */
+}
+
+/* Modal styles. add the styles for the window later */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 50vw;
-  position: relative;
-  text-align: left; /* Align elements to the left */
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
+background-color: #fefefe;
+margin: 10% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 50vw;
+position: relative;
+text-align: left; /* Align elements to the left */
+display: flex;
+flex-direction: column; /* Stack elements vertically */
 }
 
 .close {
-  color: #888;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
+color: #888;
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 28px;
+font-weight: bold;
+cursor: pointer;
 }
 
 .close:hover {
-  color: #000;
+color: #000;
 }
 
 input[id="task-name"],
 textarea,
 select {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 2px solid #333;
-    border-radius: 5px;
-    margin: .75rem .5rem;
-    width: 45vw;
-    max-width: 46rem;
-    min-height: 3rem;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  margin: .75rem .5rem;
+  width: 45vw;
+  max-width: 46rem;
+  min-height: 3rem;
 }
 
 .modal-button {
-  padding: 10px 20px;
-  font-size: 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+padding: 10px 20px;
+font-size: 20px;
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
 }
 
 .modal-button:hover {
-  background-color: #555;
+background-color: #555;
 }
 
-.to-do {
-  position: relative;
-  width: 85%;
-  margin: auto;
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
+.task-list {
+position: relative;
+width: 85%;
+margin: auto;
+margin-bottom: 1rem;
+display: flex;
+flex-direction: column;
 }
 
-.newTask {
-    display: block;
-  background: var(--peach);
-  margin: 16px;
-  border-radius: 10px;
-  cursor: pointer;
+.task-content {
+background: yellow;
+margin: 10px;
+border-radius: 10px;
+cursor: move;
 }

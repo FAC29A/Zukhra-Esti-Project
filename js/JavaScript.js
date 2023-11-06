@@ -1,14 +1,12 @@
 // Get references to DOM elements
 const modal = document.getElementById("modal");
-const newTask = document.getElementById("newTask");
 const openModalBtn = document.getElementById("open-modal-btn");
-const openTaskBtn = document.getElementById("add-task-modal");
 const closeModalBtn = document.getElementById("close-modal");
 const addTaskModalBtn = document.getElementById("add-task-modal");
 const taskNameInput = document.getElementById("task-name");
 const taskDescriptionTextarea = document.getElementById("task-description");
 const prioritySelect = document.getElementById("priority");
-const toDo = document.getElementById("to-do");
+const toDo = document.getElementById("to-do")
 const addTaskInput = document.getElementById("add-task");
 
 // Function to open the modal
@@ -27,28 +25,15 @@ function clearInputFields() {
     addTaskInput.value = "";
     taskDescriptionTextarea.value = "";
 }
-// ***********************************************************************
+
 // Function to create a task element
 function createTaskElement(taskName, taskDescription, priority) {
+    // Generate a unique ID for the task element
+    const taskId = "task-" + new Date().getTime();
+
     const taskElement = document.createElement("div");
-    taskElement.classList.add("newTask");
-    taskElement.draggable = true;
-
-      // Set the ondragstart attribute
-  taskElement.ondragstart = function (event) {
-    dragStart(event);
-  };
-
-  // Set the ondrag attribute
-  taskElement.ondrag = function (event) {
-    dragging(event);
-  };
-
-    // Add 'dragstart' event listener to the task element
-    taskElement.addEventListener('dragstart', (e) => {
-        e.dataTransfer.setData('text/plain', 'This is a draggable div');
-    });
-
+    taskElement.classList.add("task-content");
+    taskElement.id = taskId; // Set the ID of the task element
     taskElement.innerHTML = `<h3>${taskName}</h3>`;
 
     if (taskDescription.trim() !== "") {
@@ -61,8 +46,9 @@ function createTaskElement(taskName, taskDescription, priority) {
 
     return taskElement;
 }
+
 // Function to add a task from the modal
-function addTask()  {
+function addTask() {
     const taskName = taskNameInput.value;
     const taskDescription = taskDescriptionTextarea.value;
     const priority = prioritySelect.value;
@@ -72,6 +58,10 @@ function addTask()  {
 
         // Add the task to the task list
         toDo.appendChild(taskElement);
+
+        // Make the task draggable
+        taskElement.setAttribute("draggable", "true");
+        taskElement.addEventListener("dragstart", onDragStart);
 
         // Clear input fields
         clearInputFields();
@@ -95,43 +85,23 @@ closeModalBtn.addEventListener("click", closeModal);
 // Event listener to add a task from the modal
 addTaskModalBtn.addEventListener("click", addTask);
 
-//*****************************************************transfer the task to another place by dragging
-function dragStart(event) {
-    event.dataTransfer.setData("Div", event.target.id);
-  }
-  
-  
-  
-  function allowDrop(event) {
-    event.preventDefault();
-  }
-  
-  function drop(event) {
-    event.preventDefault();
-    const data = event.dataTransfer.getData("Div");
-    event.target.appendChild(document.getElementById(data));
-  }
 
-  function drop(event) {
-  event.preventDefault();
-  const data = event.dataTransfer.getData("Div");
-  const draggedDiv = document.getElementById(data);
+//Drag and Drop 
 
-  // Get the parent element of the 'in-progress' div
-  const parentElement = event.target.parentElement;
-
-  // Insert the dragged div after the 'in-progress' div
-  parentElement.insertBefore(draggedDiv, event.target.nextSibling);
+function onDragStart(event) {
+    const id = event.target.id;
+    event.dataTransfer.setData('text/plain', id);
 }
 
-  // Function to open the task
-function openTask() {
-    newTask.style.display = "block";
+function onDragOver(event) {
+    event.preventDefault();
 }
 
-// Event listener to open task button
-openTaskBtn.addEventListener("click", function (event) {
-    event.preventDefault();
-  
-    openTask();
-});
+function onDrop(event) {
+    const id = event.dataTransfer.getData('text');
+
+    const draggableElement = document.getElementById(id);
+    const dropzone = event.target;
+
+    dropzone.appendChild(draggableElement);
+}

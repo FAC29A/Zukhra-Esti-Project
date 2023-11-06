@@ -16,11 +16,11 @@
   <main>
     <!-- ADD NEW TASK -->
     <form>
-        <div class="task" draggable="true" ondragstart="onDragStart(event)">
-          <input type="text" id="add-task" placeholder="Add new task...">
-          <button id="open-modal-btn">+</button>
-        </div>
-      </form>
+      <div class="task">
+        <input type="text" id="add-task" placeholder="Add new task...">
+        <button id="open-modal-btn">+</button>
+      </div>
+    </form>
 
     <div id="modal" class="modal">
       <div class="modal-content">
@@ -38,26 +38,24 @@
       </div>
     </div>
 
+    <!-- TO-DO SECSION -->
     <div class="all-three-sections">
-   <!-- TO-DO SECTION -->
-   <div class="tasks-container" id="to-do" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <h2>To-Do:</h2>
-    <!-- Task List -->
-    <div ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget" class="newTask"></div>
-  </div>
+      <div class="tasks-container" id="to-do" ondragover="onDragOver(event)" ondrop="onDrop(event)">
+        <h2>To-Do:</h2>
+        <!-- Task List -->
+      </div>
 
-  <!-- IN PROGRESS SECTION -->
-  <div class="tasks-container" id="in-progress" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <h2>In progress:</h2>
-  </div>
-
+      <!-- IN PROGRESS SECTION -->
+      <div class="tasks-container" id="in-progress" ondragover="onDragOver(event)" ondrop="onDrop(event)">
+        <h2>In progress:</h2>
+      </div>
 
       <!-- COPLETED SECTION -->
-      <div class="tasks-container" id="completed" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div class="tasks-container" id="completed" ondragover="onDragOver(event)" ondrop="onDrop(event)">
         <h2>Completed:</h2>
       </div>
-</div>
-</main>
+    </div>
+  </main>
 
   <!-- Content of your web page goes here -->
 
