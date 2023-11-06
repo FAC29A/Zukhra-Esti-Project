@@ -170,7 +170,8 @@ select {
   flex-direction: column;
 }
 
-.task-content {
+.newTask {
+    display: block;
   background: var(--peach);
   margin: 16px;
   border-radius: 10px;

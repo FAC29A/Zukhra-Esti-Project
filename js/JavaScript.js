@@ -1,6 +1,8 @@
 // Get references to DOM elements
 const modal = document.getElementById("modal");
+const newTask = document.getElementById("newTask");
 const openModalBtn = document.getElementById("open-modal-btn");
+const openTaskBtn = document.getElementById("add-task-modal");
 const closeModalBtn = document.getElementById("close-modal");
 const addTaskModalBtn = document.getElementById("add-task-modal");
 const taskNameInput = document.getElementById("task-name");
@@ -25,12 +27,18 @@ function clearInputFields() {
     addTaskInput.value = "";
     taskDescriptionTextarea.value = "";
 }
-
+// ***********************************************************************
 // Function to create a task element
 function createTaskElement(taskName, taskDescription, priority) {
     const taskElement = document.createElement("div");
-    taskElement.classList.add("task-content");
+    taskElement.classList.add("newTask");
     taskElement.draggable = true;
+
+    // Add 'dragstart' event listener to the task element
+    taskElement.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setData('text/plain', 'This is a draggable div');
+    });
+
     taskElement.innerHTML = `<h3>${taskName}</h3>`;
 
     if (taskDescription.trim() !== "") {
@@ -43,7 +51,6 @@ function createTaskElement(taskName, taskDescription, priority) {
 
     return taskElement;
 }
-
 // Function to add a task from the modal
 function addTask()  {
     const taskName = taskNameInput.value;
@@ -79,24 +86,42 @@ closeModalBtn.addEventListener("click", closeModal);
 addTaskModalBtn.addEventListener("click", addTask);
 
 //*****************************************************transfer the task to another place by dragging
+function dragStart(event) {
+    event.dataTransfer.setData("Div", event.target.id);
+  }
+  
+  
+  
+  function allowDrop(event) {
+    event.preventDefault();
+  }
+  
+  function drop(event) {
+    event.preventDefault();
+    const data = event.dataTransfer.getData("Div");
+    event.target.appendChild(document.getElementById(data));
+  }
 
-const draggable = document.querySelectorAll('.task-content');
-const inProgress = document.querySelector('.in-progress');
+  function drop(event) {
+    event.preventDefault();
+    const data = event.dataTransfer.getData("Div");
+    const draggedDiv = document.getElementById(data);
+  
+    // Get the parent element of the 'in-progress' div
+    const parentElement = event.target.parentElement;
+  
+    // Insert the dragged div after the 'in-progress' div
+    parentElement.insertBefore(draggedDiv, event.target.nextSibling);
+  }
 
-// Add 'dragstart' event listener to each task container
-draggable.forEach((taskElement) => {
-    taskElement.addEventListener('dragstart', (e) => {
-        e.dataTransfer.setData('text/plain', 'This is a draggable div');
-    });
-});
-// Add 'dragover' event listener to the target container to allow dropping
-inProgress.addEventListener('dragover', (e) => {
-    e.preventDefault(); // Allow dropping
-});
+  // Function to open the task
+function openTask() {
+    newTask.style.display = "block";
+}
 
-// Add 'drop' event listener to the target container
-inProgress.addEventListener('drop', (e) => {
-    e.preventDefault();
-    const data = e.dataTransfer.getData('text/plain');
-    inProgress.appendChild(draggable); // Move the draggable element to the target container
+// Event listener to open task button
+openTaskBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+  
+    openTask();
 });
