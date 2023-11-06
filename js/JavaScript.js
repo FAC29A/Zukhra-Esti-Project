@@ -97,6 +97,7 @@ function onDragOver(event) {
     event.preventDefault();
 }
 
+
 function onDrop(event) {
     const id = event.dataTransfer.getData('text');
 
@@ -105,3 +106,5 @@ function onDrop(event) {
 
     dropzone.appendChild(draggableElement);
 }
+
+
