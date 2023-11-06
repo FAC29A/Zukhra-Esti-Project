@@ -34,6 +34,16 @@ function createTaskElement(taskName, taskDescription, priority) {
     taskElement.classList.add("newTask");
     taskElement.draggable = true;
 
+      // Set the ondragstart attribute
+  taskElement.ondragstart = function (event) {
+    dragStart(event);
+  };
+
+  // Set the ondrag attribute
+  taskElement.ondrag = function (event) {
+    dragging(event);
+  };
+
     // Add 'dragstart' event listener to the task element
     taskElement.addEventListener('dragstart', (e) => {
         e.dataTransfer.setData('text/plain', 'This is a draggable div');
@@ -103,16 +113,16 @@ function dragStart(event) {
   }
 
   function drop(event) {
-    event.preventDefault();
-    const data = event.dataTransfer.getData("Div");
-    const draggedDiv = document.getElementById(data);
-  
-    // Get the parent element of the 'in-progress' div
-    const parentElement = event.target.parentElement;
-  
-    // Insert the dragged div after the 'in-progress' div
-    parentElement.insertBefore(draggedDiv, event.target.nextSibling);
-  }
+  event.preventDefault();
+  const data = event.dataTransfer.getData("Div");
+  const draggedDiv = document.getElementById(data);
+
+  // Get the parent element of the 'in-progress' div
+  const parentElement = event.target.parentElement;
+
+  // Insert the dragged div after the 'in-progress' div
+  parentElement.insertBefore(draggedDiv, event.target.nextSibling);
+}
 
   // Function to open the task
 function openTask() {
