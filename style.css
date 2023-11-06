@@ -60,7 +60,7 @@ button {
 .all-three-sections {
     text-align: center;
     width: 90vw;
-    margin: 1rem 1rem;
+    margin: 1rem 6rem;
     border-radius: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -183,11 +183,14 @@ select {
 @media (max-width: 1125px) {
     .all-three-sections {
         grid-template-columns: repeat(2, 1fr);
+        margin: 1rem 2rem;
+
     }
 }
 
 @media (max-width: 800px) {
     .all-three-sections {
         grid-template-columns: repeat(1, 1fr);
+        margin: 1rem 1rem;
     }
 }
