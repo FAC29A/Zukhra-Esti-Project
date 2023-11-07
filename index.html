@@ -12,10 +12,23 @@
       <h1>Let's Do List!</h1>
     </header>
 
+
+
     <main>
+
+       <div class="task">
+          <div
+            class="bin-container"
+            id="delete"
+            ondragover="onDragOver(event)"
+            ondrop="onDrop(event)"
+          >
+            <h5>Delete</h5>
+            <!-- Task List -->
+          </div>
       <!-- ADD NEW TASK -->
       <form>
-        <div class="task">
+       
           <input type="text" id="add-task" placeholder="Add new task..." />
           <button id="open-modal-btn">+</button>
         </div>
@@ -40,8 +53,9 @@
         </div>
       </div>
 
-      <!-- TO-DO SECSION -->
       <div class="all-three-sections">
+        <!-- TO-DO SECSION -->
+
         <div
           class="tasks-container"
           id="to-do"
