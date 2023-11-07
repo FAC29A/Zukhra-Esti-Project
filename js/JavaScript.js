@@ -37,11 +37,11 @@ function createTaskElement(taskName, taskDescription, priority) {
   taskElement.innerHTML = `<h3>${taskName}</h3>`;
 
   if (taskDescription.trim() !== "") {
-    taskElement.innerHTML += `<p>Description: ${taskDescription}</p>`;
+    taskElement.innerHTML += `<p>${taskDescription}</p>`;
   }
 
   if (priority.trim() !== "") {
-    taskElement.innerHTML += `<p>Priority: ${priority}</p>`;
+    taskElement.innerHTML += `<p>${priority}</p>`;
   }
 
   return taskElement;
