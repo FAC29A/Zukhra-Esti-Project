@@ -13,8 +13,8 @@
 
 /* Let's Do List! */
 h1 {
-  color: var(--dark-green);
-  font-size: 3rem;
+  color: var(--dark-grey);
+  font-size: calc(3vw + 5px);
   text-align: center;
 }
 
@@ -62,7 +62,6 @@ button {
 
 .all-three-sections {
   text-align: center;
-  width: 90vw;
   margin: 2rem 9rem;
   border-radius: 30px;
   display: grid;
@@ -174,8 +173,24 @@ flex-direction: column;
 }
 
 .task-content {
-background: yellow;
+background: var(--peach);
 margin: 10px;
 border-radius: 10px;
 cursor: move;
+}
+
+
+@media (max-width: 1125px) {
+    .all-three-sections {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 1rem 2rem;
+
+    }
+}
+
+@media (max-width: 800px) {
+    .all-three-sections {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 1rem 1rem;
+    }
 }
