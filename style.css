@@ -71,7 +71,6 @@ button {
 
 #to-do {
   background-color: #4584b8;
-  display: grid;
   min-height: 26rem;
   border-radius: 10%;
   margin: 9%;
@@ -79,7 +78,6 @@ button {
 
 #in-progress {
   background-color: var(--orange);
-  display: grid;
   min-height: 26rem;
   border-radius: 10%;
   margin: 9%;
@@ -87,7 +85,6 @@ button {
 
 #completed {
   background-color: var(--dark-green);
-  display: grid;
   min-height: 26rem;
   border-radius: 10%;
   margin: 9%;
