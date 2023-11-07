@@ -12,27 +12,22 @@
       <h1>Let's Do List!</h1>
     </header>
 
-
-
     <main>
-
-       <div class="task">
-          <div
-            class="bin-container"
-            id="delete"
-            ondragover="onDragOver(event)"
-            ondrop="onDrop(event)"
-          >
-            <h5>Delete</h5>
-            <!-- Task List -->
-          </div>
-      <!-- ADD NEW TASK -->
-      <form>
-       
+      <div class="task">
+        <!-- ADD NEW TASK -->
+        <form>
           <input type="text" id="add-task" placeholder="Add new task..." />
           <button id="open-modal-btn">+</button>
+        </form>
+        <div
+          class="bin-container"
+          id="delete"
+          ondragover="onDragOver(event)"
+          ondrop="onDrop(event)"
+        >
+          <!-- Task List -->
         </div>
-      </form>
+      </div>
 
       <div id="modal" class="modal">
         <div class="modal-content">
