@@ -1,13 +1,12 @@
-:root{
-
-  --font: 'Nunito', sans-serif;
+:root {
+  --font: "Nunito", sans-serif;
   --dark-green: rgb(35, 129, 118);
   --dark-grey: #e2e2dd;
   --blue: #4584b8;
   --green: #8ca8a2;
   --orange: #ebc183;
   --pink: #db85b5;
-  --peach: #F9C6C9;
+  --peach: #f9c6c9;
   --black: #5a5555;
 }
 
@@ -28,6 +27,7 @@ header {
 
 body {
   background-color: var(--green);
+  margin: 0%;
 }
 
 /* ADD NEW TASK */
@@ -40,7 +40,7 @@ input {
   background: var(--dark-grey);
   border-radius: 15px;
   border: none;
-  margin: .75rem .5rem;
+  margin: 0.75rem 0.5rem;
   width: 65vw;
   max-width: 23rem;
   min-height: 3rem;
@@ -59,7 +59,6 @@ button {
   font-size: large;
 }
 
-
 .all-three-sections {
   text-align: center;
   margin: 2rem 9rem;
@@ -68,7 +67,6 @@ button {
   grid-template-columns: repeat(3, 1fr);
   flex-direction: column;
   align-items: center;
-
 }
 
 #to-do {
@@ -83,9 +81,8 @@ button {
   background-color: var(--orange);
   display: grid;
   min-height: 26rem;
-  border-radius: 10%;.    
+  border-radius: 10%;
   margin: 9%;
-
 }
 
 #completed {
@@ -94,46 +91,45 @@ button {
   min-height: 26rem;
   border-radius: 10%;
   margin: 9%;
-
 }
 
 /* Modal styles. add the styles for the window later */
 
 .modal {
-display: none;
-position: fixed;
-z-index: 1;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-content {
-background-color: #fefefe;
-margin: 10% auto;
-padding: 20px;
-border: 1px solid #888;
-width: 50vw;
-position: relative;
-text-align: left; /* Align elements to the left */
-display: flex;
-flex-direction: column; /* Stack elements vertically */
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50vw;
+  position: relative;
+  text-align: left; /* Align elements to the left */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
 }
 
 .close {
-color: #888;
-position: absolute;
-top: 10px;
-right: 10px;
-font-size: 28px;
-font-weight: bold;
-cursor: pointer;
+  color: #888;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .close:hover {
-color: #000;
+  color: #000;
 }
 
 input[id="task-name"],
@@ -143,54 +139,52 @@ select {
   margin-bottom: 10px;
   border: 2px solid #333;
   border-radius: 5px;
-  margin: .75rem .5rem;
+  margin: 0.75rem 0.5rem;
   width: 45vw;
   max-width: 46rem;
   min-height: 3rem;
 }
 
 .modal-button {
-padding: 10px 20px;
-font-size: 20px;
-background-color: #333;
-color: #fff;
-border: none;
-border-radius: 5px;
-cursor: pointer;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .modal-button:hover {
-background-color: #555;
+  background-color: #555;
 }
 
 .task-list {
-position: relative;
-width: 85%;
-margin: auto;
-margin-bottom: 1rem;
-display: flex;
-flex-direction: column;
+  position: relative;
+  width: 85%;
+  margin: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .task-content {
-background: var(--peach);
-margin: 10px;
-border-radius: 10px;
-cursor: move;
+  background: var(--peach);
+  margin: 20px;
+  border-radius: 10px;
+  cursor: move;
 }
 
-
 @media (max-width: 1125px) {
-    .all-three-sections {
-        grid-template-columns: repeat(2, 1fr);
-        margin: 1rem 2rem;
-
-    }
+  .all-three-sections {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem 2rem;
+  }
 }
 
 @media (max-width: 800px) {
-    .all-three-sections {
-        grid-template-columns: repeat(1, 1fr);
-        margin: 1rem 1rem;
-    }
+  .all-three-sections {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 1rem 1rem;
+  }
 }
