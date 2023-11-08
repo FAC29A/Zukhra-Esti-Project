@@ -23,11 +23,11 @@
 
 ![image](https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/bb3d68e0-1433-4fe2-b96e-ec247db3caf5)
 
-1. **To-Do:** Create new tasks and organize your to-do list.
+1. <img src="images/v.png" alt="Logo" width="20" height="20"> **To-Do:** Create new tasks and organize your to-do list.
 
-2. **In Progress:** Move tasks here to indicate that you're currently working on them.
+2. <img src="images/v.png" alt="Logo" width="20" height="20"> **In Progress:** Move tasks here to indicate that you're currently working on them.
 
-3. **Complete:** Move completed tasks to this section for a sense of accomplishment.
+3. <img src="images/v.png" alt="Logo" width="20" height="20"> **Complete:** Move completed tasks to this section for a sense of accomplishment.
 
 The standout feature is the drag-and-drop functionality that allows you to move tasks between these sections. Additionally, you can easily delete tasks by dragging them to the bin folder.
 
