@@ -1,6 +1,12 @@
-# Let's Do List!
+<div align="center">
+  
+  <img src="images/note.PNG" alt="Logo" width="80" height="80">
+  
+# [Let's Do List!](fac29a.github.io/Zukhra-Esti-Project)
 
-"Let's Do List!" is a collaborative project created by Esti and Zukhra to help you stay organized and manage your tasks effectively. It's a responsive web application that can be accessed from various devices, such as laptops, tablets, and smartphones.
+</div>
+
+"Let's Do List!" is a collaborative project created by [Zukhra](https://github.com/Zu18) and [Esti](https://github.com/Estishi87) to help you stay organized and manage your tasks effectively. It's a responsive web application that can be accessed from various devices, such as laptops, tablets, and smartphones.
 
 ## Table of Contents
 
@@ -57,4 +63,4 @@ We are excited to share "Let's Do List!" with you, and we hope it helps streamli
 
 For any questions or feedback, please feel free to contact us.
 
-[![Zukhra & Esti](https://fac29a.github.io/Zukhra-Esti-Project/)](https://fac29a.github.io/Zukhra-Esti-Project/)
+[Zukhra & Esti](https://fac29a.github.io/Zukhra-Esti-Project/)
