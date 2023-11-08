@@ -1,5 +1,7 @@
 <div align="center">
+  
   <img src="images/note.PNG" alt="Logo" width="80" height="80">
+  
 # [Let's Do List!](fac29a.github.io/Zukhra-Esti-Project)
 
 </div>
