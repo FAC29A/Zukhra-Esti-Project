@@ -1,6 +1,6 @@
 <div align="center">
   
-  <img src="images/note.PNG" alt="Logo" width="80" height="80">
+  <img src="images/note.png" alt="Logo" width="200" height="200">
   
 # [Let's Do List!](fac29a.github.io/Zukhra-Esti-Project)
 
@@ -21,6 +21,8 @@
 
 "Let's Do List!" offers a simple yet powerful task management system with three separate sections:
 
+![image](https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/bb3d68e0-1433-4fe2-b96e-ec247db3caf5)
+
 1. **To-Do:** Create new tasks and organize your to-do list.
 
 2. **In Progress:** Move tasks here to indicate that you're currently working on them.
@@ -32,10 +34,12 @@ The standout feature is the drag-and-drop functionality that allows you to move 
 ## Usage
 
 1. Add New Tasks: Simply type your new task in the input field and click the "+" button.
+   
+![image](https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/9549fc80-7bfb-483e-898a-74e84073c4ee)
 
-2. Organize Tasks: Use drag-and-drop to move tasks between the "To-Do," "In Progress," and "Complete" sections.
+3. Organize Tasks: Use drag-and-drop to move tasks between the "To-Do," "In Progress," and "Complete" sections.
 
-3. Delete Tasks: Drag a task to the bin folder to delete it.
+4. Delete Tasks: Drag a task to the bin folder to delete it.  <img src="images/bin.png" alt="Logo" width="22" height="22">
 
 ## Branching and Collaboration
 
@@ -49,6 +53,9 @@ We employed a collaborative development approach using Git branches. Here's how 
 
 ## Project Planning
 
+![image](https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/846c8261-68de-4284-875a-6fbb4be27d4c)
+
+
 We found GitHub's project planning tool to be extremely valuable for staying organized and efficiently managing our tasks. It allowed us to create and assign tasks, track progress, and maintain a clear roadmap for the project.
 
 ## Documentation
@@ -58,6 +65,22 @@ You can find detailed instructions on how to use "Let's Do List!" on the project
 ## Tests
 
 Testing played a vital role in ensuring the reliability and functionality of "Let's Do List!" We invested time in learning testing and implemented tests for each method in the project. This approach helped us identify and rectify issues and provided a level of automation in our testing process.
+
+```
+//First test group: Modal open and close
+
+test("Opening and closing the modal", () => {
+    const modal = document.getElementById("modal");
+    const openModalBtn = document.getElementById("open-modal-btn");
+    // Click the open button to open the modal
+    openModalBtn.click();
+    equal(modal.style.display, "block", "Modal should be open");
+    const closeModalBtn = document.getElementById("close-modal");
+    // Click the open button to close the modal
+    closeModalBtn.click();
+    equal(modal.style.display, "none", "Modal should be closed");
+});
+```
 
 We are excited to share "Let's Do List!" with you, and we hope it helps streamline your task management and organization.
 
