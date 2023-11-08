@@ -1,6 +1,6 @@
 <div align="center">
   
-  <img src="images/note.png" alt="Logo" width="200" height="200">
+  <img src="images/note1.png" alt="Logo" width="200" height="200">
   
 # [Let's Do List!](fac29a.github.io/Zukhra-Esti-Project)
 
@@ -39,7 +39,7 @@ The standout feature is the drag-and-drop functionality that allows you to move 
 
 3. Organize Tasks: Use drag-and-drop to move tasks between the "To-Do," "In Progress," and "Complete" sections.
 
-4. Delete Tasks: Drag a task to the bin folder to delete it.  <img src="images/bin.png" alt="Logo" width="22" height="22">
+4. Delete Tasks: Drag a task to the bin folder to delete it.  <img src="images/bin.png" alt="Logo" width="40" height="40">
 
 ## Branching and Collaboration
 
