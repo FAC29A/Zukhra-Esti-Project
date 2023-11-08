@@ -242,9 +242,11 @@ select {
     margin-left: 9%;
     margin-right: 9%;
   }
-}
+
 .bin-container {
     top: 0px;
     right: 0px;
     position: static;
   }
+
+}
