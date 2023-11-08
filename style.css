@@ -212,7 +212,39 @@ select {
 
 @media (max-width: 800px) {
   .all-three-sections {
+    grid-auto-rows:70%;
     grid-template-columns: repeat(1, 1fr);
     margin: 1rem 1rem;
   }
+
+  #to-do {
+    max-width: 46rem;
+    min-height: 2rem;
+    margin: 0;
+    margin-left: 9%;
+    margin-right: 9%;
+  }
+  
+  #in-progress {
+    max-width: 46rem;
+    min-height: 5rem;
+    margin: 0;
+    margin-left: 9%;
+    margin-right: 9%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  #completed {
+    max-width: 46rem;
+    min-height: 3rem;
+    margin: 0;
+    margin-left: 9%;
+    margin-right: 9%;
+  }
 }
+.bin-container {
+    top: 0px;
+    right: 0px;
+    position: static;
+  }
