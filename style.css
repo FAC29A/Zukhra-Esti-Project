@@ -17,6 +17,11 @@ h1 {
   text-align: center;
 }
 
+h3, p {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+
 header {
   background: var(--black);
   width: 100%;
@@ -111,9 +116,11 @@ button {
   border: 1px solid #888;
   width: 50vw;
   position: relative;
-  text-align: left; /* Align elements to the left */
+  text-align: left;
+  /* Align elements to the left */
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
+  flex-direction: column;
+  /* Stack elements vertically */
 }
 
 .close {
@@ -157,20 +164,21 @@ select {
   background-color: #555;
 }
 
-.task-list {
-  position: relative;
-  width: 85%;
-  margin: auto;
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-}
-
 .task-content {
   background: var(--peach);
-  margin: 20px;
-  border-radius: 10px;
+  margin: 1.25rem; 
+  border-radius: 0.625rem; 
+  padding: 0.3125rem; 
+  padding-left: 0.625rem;
   cursor: move;
+  text-align: left;
+}
+
+.highlight-text {
+  background-color: #fc9da4;
+  padding: 0.125rem 0.25rem; 
+  border-radius: 0.25rem;
+  font-size: 0.875rem; 
 }
 
 .bin-container {

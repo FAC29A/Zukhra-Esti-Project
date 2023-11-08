@@ -40,7 +40,7 @@ function createTaskElement(taskName, taskDescription, priority) {
         taskElement.innerHTML += `<p>${taskDescription}</p>`;
     }
     
-    taskElement.innerHTML += `<p>${priority}</p>`;
+    taskElement.innerHTML += `<p><span class="highlight-text">${priority}</span></p>`;
 
 
     return taskElement;

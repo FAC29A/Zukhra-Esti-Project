@@ -1,5 +1,4 @@
-console.log("tests");
-//********************************************************/ First test: Modal open and close
+//First test group: Modal open and close
 
 test("Opening and closing the modal", () => {
     const modal = document.getElementById("modal");
@@ -13,8 +12,7 @@ test("Opening and closing the modal", () => {
     equal(modal.style.display, "none", "Modal should be closed");
 });
 
-//****************************************************/ Secod test: Create a task elements finctionality
-// Creating a task element with name, description, and priority
+// Secod test group: Create a task elements finctionality
 test("Create task element with name, description, and priority", () => {
     const taskName = "Test Task";
     const taskDescription = "This is a test task";
@@ -26,10 +24,11 @@ test("Create task element with name, description, and priority", () => {
     equal(taskElement.classList.contains("task-content"), true, "Task element has the 'task-content' class");
     equal(taskElement.innerHTML.includes("<h3>Test Task</h3>"), true, "Task name is present");
     equal(taskElement.innerHTML.includes("<p>This is a test task</p>"), true, "Description is present");
-    equal(taskElement.innerHTML.includes("<p>High</p>"), true, "Priority is present");
+    equal(taskElement.querySelector('.highlight-text').textContent, 'High', "Priority is present");
+
 });
 
-// Creating a task element with name and priority only
+
 test("Create task element with name and priority only", () => {
     const taskName = "Test Task";
     const priority = "High";
@@ -38,7 +37,7 @@ test("Create task element with name and priority only", () => {
     equal(taskElement.classList.contains("task-content"), true, "Task element has the 'task-content' class");
     equal(taskElement.innerHTML.includes("<h3>Test Task</h3>"), true, "Task name is present");
     notEqual(taskElement.innerHTML.includes("<p>Description:"), true, "Description is not present");
-    equal(taskElement.innerHTML.includes("<p>High</p>"), true, "Priority should be present");
+    equal(taskElement.querySelector('.highlight-text').textContent, 'High', "Priority is present");
 });
 
 //****************************************************/ Secod test: Add task finctionality
