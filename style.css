@@ -43,7 +43,7 @@ body {
   position: relative;
 }
 
-input {
+input[id="add-task"] {
   background: var(--dark-grey);
   border-radius: 15px;
   border: none;
@@ -147,7 +147,6 @@ select {
   border-radius: 5px;
   margin: 0.75rem 0.5rem;
   width: auto;
-  max-width: 46rem;
   min-height: 3rem;
 }
 
