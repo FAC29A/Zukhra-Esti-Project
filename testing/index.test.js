@@ -40,7 +40,58 @@ test("Create task element with name and priority only", () => {
     equal(taskElement.querySelector('.highlight-text').textContent, 'High', "Priority is present");
 });
 
-//****************************************************/ Secod test: Add task finctionality
+//Third test group: Add task finctionality
+test("Add task with an empty name", () => {
+    // Mocking the input values
+    taskNameInput.value = "";
+    taskDescriptionTextarea.value = "This is a test task";
+    prioritySelect.value = "Medium";
+
+    // Running the addTask function
+    addTask();
+
+    // Checking if no task has been added to the task list
+    const taskList = document.getElementById("to-do");
+    const taskElements = taskList.getElementsByClassName("task-content");
+
+    equal(taskElements.length, 0, "No task added with an empty name");
+});
+
+test("Add task with a whitespace-only name", () => {
+    // Mocking the input values
+    taskNameInput.value = "   ";
+    taskDescriptionTextarea.value = "This is a test task";
+    prioritySelect.value = "Low";
+
+    // Running the addTask function
+    addTask();
+
+    // Checking if no task has been added to the task list
+    const taskList = document.getElementById("to-do");
+    const taskElements = taskList.getElementsByClassName("task-content");
+
+    equal(taskElements.length, 0, "No task added with a whitespace-only name");
+});
+
+
+test("Add task with a valid name and priority", () => {
+    // Mocking the input values
+    taskNameInput.value = "Test Task";
+    taskDescriptionTextarea.value = "This is a test task";
+    prioritySelect.value = "Important";
+
+    // Running the addTask function
+    addTask();
+
+    // Checking if the task has been added to the task list
+    const taskList = document.getElementById("to-do");
+    const taskElements = taskList.getElementsByClassName("task-content");
+
+    equal(taskElements.length, 1, "Task has been added to the task list");
+    // Remove created task
+    Array.from(taskElements).forEach((element) => element.remove());
+});
+
 
 //****************************************************/ Third test: Drag and drop functionality
 // Define your test cases
