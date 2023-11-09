@@ -51,22 +51,6 @@ https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/3011633c-5129-485
 
 The standout feature is the drag-and-drop functionality that allows you to move tasks between these sections. Additionally, you can easily delete tasks by dragging them to the bin folder.
 
-<<<<<<< HEAD
-=======
-## Usage
-
-1. Add New Tasks: Simply type your new task in the input field and click the "+" button.
-   
-
-![form](https://github.com/FAC29A/Zukhra-Esti-Project/assets/110585545/f07b90b4-8486-4d80-b909-d6cb25ee6340)
-   
-
-
-3. Organize Tasks: Use drag-and-drop to move tasks between the "To-Do," "In Progress," and "Complete" sections.
-
-4. Delete Tasks: Drag a task to the bin folder to delete it.  <img src="images/bin.png" alt="Logo" width="40" height="40">
->>>>>>> 015ea4a72bb8507df051cd428c6464e05ee2be36
-
 ## Branching and Collaboration
 
 We employed a collaborative development approach using Git branches. Here's how it worked:
