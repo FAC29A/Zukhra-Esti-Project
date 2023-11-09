@@ -10,12 +10,32 @@
 
 ## Table of Contents
 
-- [Features](#features)
+- [Installation](#Installation-Instructions)
 - [Usage](#usage)
+- [Features](#features)
 - [Branching and Collaboration](#branching-and-collaboration)
 - [Project Planning](#project-planning)
 - [Documentation](#documentation)
 - [Tests](#tests)
+- [Acknowledgments](#Acknowledgments)
+- [Contributing](#contributing)
+- [Contact](#contact)
+
+## Installation Instructions
+
+Our next steps involve delving deeper into testing, enhancing code accessibility, making minor improvements, and subsequently creating a presentation. Stay tuned for updates!
+
+## Usage
+
+https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/3011633c-5129-4850-bc19-a12e0cb5ad60
+
+1. Add New Tasks: Simply type your new task in the input field and click the "+" button.
+
+![image](https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/c066674e-dba4-437c-a0bb-965a25a5424c)
+
+2. Organize Tasks: Use drag-and-drop to move tasks between the "To-Do," "In Progress," and "Complete" sections.
+
+3. Delete Tasks: Drag a task to the bin folder to delete it.  <img src="images/bin.png" alt="Logo" width="40" height="40">
 
 ## Features
 
@@ -31,15 +51,6 @@
 
 The standout feature is the drag-and-drop functionality that allows you to move tasks between these sections. Additionally, you can easily delete tasks by dragging them to the bin folder.
 
-## Usage
-
-1. Add New Tasks: Simply type your new task in the input field and click the "+" button.
-   
-![image](https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/9549fc80-7bfb-483e-898a-74e84073c4ee)
-
-3. Organize Tasks: Use drag-and-drop to move tasks between the "To-Do," "In Progress," and "Complete" sections.
-
-4. Delete Tasks: Drag a task to the bin folder to delete it.  <img src="images/bin.png" alt="Logo" width="40" height="40">
 
 ## Branching and Collaboration
 
@@ -81,6 +92,17 @@ test("Opening and closing the modal", () => {
     equal(modal.style.display, "none", "Modal should be closed");
 });
 ```
+
+## Acknowledgments
+
+- We utilized ChatGPT to enhance our code and improve our understanding of testing.
+- Special thanks to Fac28 project by Nich and Carlos, whose example proved helpful. [Check it out here](https://github.com/fac28/todo-list-nicarlos).
+
+## Contributing
+
+We appreciate any feedback or improvements you might have. Feel free to contribute to our project!
+
+## Contact
 
 We are excited to share "Let's Do List!" with you, and we hope it helps streamline your task management and organization.
 
