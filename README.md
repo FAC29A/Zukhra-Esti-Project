@@ -35,7 +35,8 @@ The standout feature is the drag-and-drop functionality that allows you to move 
 
 1. Add New Tasks: Simply type your new task in the input field and click the "+" button.
    
-![image](https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/9549fc80-7bfb-483e-898a-74e84073c4ee)
+![form](https://github.com/FAC29A/Zukhra-Esti-Project/assets/110585545/f07b90b4-8486-4d80-b909-d6cb25ee6340)
+   
 
 3. Organize Tasks: Use drag-and-drop to move tasks between the "To-Do," "In Progress," and "Complete" sections.
 
