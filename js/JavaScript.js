@@ -19,6 +19,13 @@ function closeModal() {
     modal.style.display = "none";
 }
 
+  // Event listener to add a task when Enter key is pressed in the input field
+  taskNameInput.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+      addTask();
+    }
+  });
+
 // Function to clear input fields
 function clearInputFields() {
     taskNameInput.value = "";
