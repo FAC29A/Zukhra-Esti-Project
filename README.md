@@ -64,7 +64,7 @@ We employed a collaborative development approach using Git branches. Here's how 
 
 ## Project Planning
 
-![image](https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/846c8261-68de-4284-875a-6fbb4be27d4c)
+![image](https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/28ea3d3c-82fc-406c-86e0-59549b9cf48a)
 
 
 We found GitHub's project planning tool to be extremely valuable for staying organized and efficiently managing our tasks. It allowed us to create and assign tasks, track progress, and maintain a clear roadmap for the project.
