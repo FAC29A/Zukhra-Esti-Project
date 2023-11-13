@@ -31,7 +31,8 @@ https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/3011633c-5129-485
 
 1. Add New Tasks: Simply type your new task in the input field and click the "+" button.
 
-![image](https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/c066674e-dba4-437c-a0bb-965a25a5424c)
+![image](https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/adaaa78b-f079-41f6-a7d0-11caec2d3829)
+
 
 2. Organize Tasks: Use drag-and-drop to move tasks between the "To-Do," "In Progress," and "Complete" sections.
 
@@ -41,7 +42,7 @@ https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/3011633c-5129-485
 
 "Let's Do List!" offers a simple yet powerful task management system with three separate sections:
 
-![image](https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/bb3d68e0-1433-4fe2-b96e-ec247db3caf5)
+![image](https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/c06e589b-a489-4a38-9c98-6337520707af)
 
 1. <img src="images/v.png" alt="Logo" width="20" height="20"> **To-Do:** Create new tasks and organize your to-do list.
 
