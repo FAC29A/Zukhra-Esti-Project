@@ -108,4 +108,4 @@ We are excited to share "Let's Do List!" with you, and we hope it helps streamli
 
 For any questions or feedback, please feel free to contact us.
 
-[Zukhra & Esti](https://fac29a.github.io/Zukhra-Esti-Project/)
+[Zukhra](https://www.linkedin.com/in/zukhra-galieva/) & [Esti](https://www.linkedin.com/in/ester-shimony/)
