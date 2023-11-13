@@ -16,8 +16,8 @@
       <div class="task">
         <!-- ADD NEW TASK -->
         <form>
-          <input type="text" id="add-task" placeholder="Add new task..." />
-          <button id="open-modal-btn">+</button>
+          <input type="text" id="add-task" placeholder="Add new task..." tabindex="1"/>
+          <button id="open-modal-btn" tabindex="2">+</button>
         </form>
         <div
           class="bin-container"
@@ -33,21 +33,21 @@
         <div class="modal-content">
           <span class="close" id="close-modal">&times;</span>
           <h2>Add New Task</h2>
-          <input type="text" id="task-name" placeholder="Task name" required />
-          <textarea
+          <input tabindex="3" type="text" id="task-name" placeholder="Task name" required />
+          <textarea tabindex="4"
             id="task-description"
-            placeholder="Task description(optional)"
+            placeholder="Task description(optional)" 
           ></textarea>
-          <select id="priority">
+          <select id="priority" tabindex="5">
             <option value="Very important">Very important</option>
             <option value="Important">Important</option>
             <option value="Low Priority">Low Priority</option>
           </select>
-          <button id="add-task-modal" class="modal-button">Add</button>
+          <button tabindex="6" id="add-task-modal" class="modal-button">Add</button>
         </div>
       </div>
 
-      <div class="all-three-sections">
+      <div class="all-three-sections"           >
         <!-- TO-DO SECSION -->
 
         <div
@@ -55,6 +55,7 @@
           id="to-do"
           ondragover="onDragOver(event)"
           ondrop="onDrop(event)"
+          tabindex="7"
         >
           <h2>To-Do:</h2>
           <!-- Task List -->
@@ -66,6 +67,7 @@
           id="in-progress"
           ondragover="onDragOver(event)"
           ondrop="onDrop(event)"
+          tabindex="8"
         >
           <h2>In progress:</h2>
         </div>
@@ -76,6 +78,7 @@
           id="completed"
           ondragover="onDragOver(event)"
           ondrop="onDrop(event)"
+          tabindex="9"
         >
           <h2>Completed:</h2>
         </div>
