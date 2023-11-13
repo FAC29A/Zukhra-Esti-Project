@@ -36,7 +36,7 @@ https://github.com/FAC29A/Zukhra-Esti-Project/assets/125391502/3011633c-5129-485
 
 2. Organize Tasks: Use drag-and-drop to move tasks between the "To-Do," "In Progress," and "Complete" sections.
 
-3. Delete Tasks: Drag a task to the bin folder to delete it.  <img src="images/bin.png" alt="Logo" width="40" height="40">
+3. Delete Tasks: Drag a task to the bin folder to delete it.  <img src="images/bin.png" alt="Logo" width="36" height="40">
 
 ## Features
 
