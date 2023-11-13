@@ -35,6 +35,7 @@ function createTaskElement(taskName, taskDescription, priority) {
     taskElement.classList.add("task-content");
     taskElement.id = taskId; // Set the ID of the task element
     taskElement.innerHTML = `<h3>${taskName}</h3>`;
+    taskElement.tabIndex = 10;
 
     if (taskDescription.trim() !== "") {
         taskElement.innerHTML += `<p>${taskDescription}</p>`;
