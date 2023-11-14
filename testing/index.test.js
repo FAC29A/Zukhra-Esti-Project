@@ -93,8 +93,7 @@ test("Add task with a valid name and priority", () => {
 });
 
 
-//****************************************************/ Third test: Drag and drop functionality
-// Define your test cases
+//Forth test group: Drag and drop functionality
 test("onDragStart should set dataTransfer correctly", () => {
     // Create a dynamic task element
     const taskElement = document.createElement("div");
@@ -144,7 +143,7 @@ test("onDrop should move the task to the appropriate section", () => {
     );
 });
 
-//****************************************************/ Forth test: Delete functionality
+//Fifth test group: Delete functionality
 
 test('onDrop should delete the task if dropped into the "delete" bin', () => {
     // Create a dynamic task element
@@ -166,15 +165,18 @@ test('onDrop should delete the task if dropped into the "delete" bin', () => {
             },
         },
         target: deleteBin,
-    };
-
-    draggableElement.remove = function () {
-        equal(
-            draggableElement.parentElement,
-            null,
-            'Task should be removed when dropped into the "delete" bin'
-        );
+        preventDefault: function () {}, // Mock preventDefault function
     };
 
     onDrop(event);
+
+    // Additional check: Make sure the task element was removed
+    equal(document.getElementById("task-3"), null, 'Task should have been removed');
+
+    // Additional check: Make sure draggableElement is not in the document body anymore
+    equal(document.body.contains(draggableElement), false, 'Task should not be in the document body');
 });
+
+
+
+
